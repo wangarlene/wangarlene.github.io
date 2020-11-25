@@ -139,6 +139,7 @@ nav img {
   text-align: right;
 }
 .bookshelf h3 {
+  margin: 0px;
   margin-top: 150px;
   font-size: 30px;
   font-weight: 400;
