@@ -1,0 +1,313 @@
+/*GLOBAL STYLES*/
+html {
+  height:100%;
+  margin: 0px;
+  padding: 0px;
+}
+body {
+  /* background: #200E2C url(../images/ArleneWang_WebDraft.jpg) no-repeat 50% / cover; */
+  background: #200E2C;
+  font-family: 'Crimson Pro', serif;
+  font-weight: 300;
+  line-height: 1.2;
+  color: #F8EFDE;
+  margin:0px;
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+header, main {
+  margin: 0px 80px;
+}
+p {
+  font-size: 20px;
+}
+
+/* HEADER STYLES */
+h1 {
+  font-family: 'Yeseva One', cursive;
+  font-size: 60px;
+  color: #F8EFDE;
+  margin:70px 0px 20px;
+}
+h2 {
+  font-weight: 300;
+  font-size: 30px;
+}
+.home-heading {
+  text-align:center;
+  padding: 300px 300px 30px;
+  font-size: 100px;
+  margin-top: 0px;
+}
+.home-subheading {
+    text-align:center;
+    margin-bottom: 270px;
+}
+
+
+/* LINK STYLES */
+a {
+  text-decoration: none;
+  font-style: italic;
+  font-weight: 500;
+  color: #F8EFDE;
+}
+a:hover {
+  filter: brightness(80%);
+}
+/* NAV STYLES */
+
+nav {
+  padding: 15px 480px;
+  text-decoration: none;
+  font: italic 500 18px serif;
+  text-align: center;
+  background: #F8EFDE;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+nav a {
+    color: #9b5252;
+    font-size:24px;
+}
+nav img {
+  position: absolute;
+    top: 15px; left: 15px;
+  width:32px;
+}
+.home-nav {
+  background: transparent;
+}
+.home-nav a {
+  color: #F8EFDE;
+}
+
+/* IMAGE STYLES */
+.header-star{
+  width: 52%;
+  margin: 30px 20px 0px;
+  float: right;
+}
+.profile-img{
+  width:25%;
+  float:left;
+  border-radius: 7px;
+  margin-right: 50px;
+}
+.window {
+  display: flex;
+  flex-direction: row;
+}
+.window-container{
+  width: 100%;
+  text-align: center;
+  font-size: 20px;
+}
+.window-container img{
+  width: 50%;
+}
+.heart-back {
+  width:30px;
+  position: relative;
+  top: 125px; right: 55px;
+}
+
+.bookshelf{
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  margin-bottom: 50px;
+}
+.bookshelf img{
+  width: 250px;
+}
+
+.book-left img{
+  float: left;
+  margin: 20px 30px 0px 100px;
+}
+.book-right img {
+  float:right;
+  margin: 20px 100px 0px 30px;
+  text-align: right;
+}
+.book-right p{
+  text-align: right;
+}
+.book-right h3{
+  text-align: right;
+  margin-bottom: 0px;
+}
+
+.hover-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 30vw);
+    grid-gap: 20px;
+    margin: 50px 0px 50px;
+}
+.hover-grid-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Main container */
+. {
+ position: relative;
+ width: 100%;
+}
+/* Original image */
+.container .hover-grid-img{
+ display: block;
+ width: 100%;
+ height: auto;
+}
+/* New overlay on hover */
+.container .hover {
+ position: relative;
+ top: -430px;
+ /* fix this lol */
+ height: 100%;
+ width: 100%;
+ opacity: 0;
+ transition: .5s ease;
+}
+/* New overlay appearance on hover */
+.container:hover .hover {
+ opacity: 10;
+}
+/* Original text overlay */
+.container .text {
+ color: #fff;
+ font-size: 30px;
+ line-height: 1.5em;
+ text-shadow: 2px 2px 2px #000;
+ text-align: center;
+ position: absolute;
+ top: 50%;
+ left: 50%;
+ transform: translate(-50%, -50%);
+ width: 100%;
+}
+
+/* TEXT STYLES */
+.home-intro p{
+  text-align: center;
+  line-height: 1.6;
+  font-size: 24px;
+  padding: 200px 0px 200px;
+}
+.bio1, .bio2 {
+  text-align: end;
+  font-size: 26px;
+}
+.bio1 {
+  font-style: italic;
+}
+.quote-left, .quote-right {
+  font-size: 40px;
+  margin-top: 50px;
+}
+.quote-left{
+  margin-left: 150px;
+}
+/* LIST STYLES */
+ul {
+  list-style: none;
+}
+ul li:before{
+  content: '♥︎';
+  font-size: 10px;
+  margin-left:-20px;
+}
+li{
+  font-size: 20px;
+  line-height: 1.3;
+  font-weight: 400;
+}
+/* HOMEPAGE BACKGROUND*/
+
+.home-bg {
+  background: url(../images/home-bg.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center center;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  min-height: 500px;
+}
+
+
+/* FOOTER STYLES */
+footer {
+  background: #F8EFDE;
+  color: #200E2C;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: auto;
+  flex-direction: column;
+  min-height: 100%;
+}
+
+/* CONTACT STYLES*/
+.contact-info{
+  display:flex;
+  flex-direction: row;
+}
+.contact-info p{
+  font-size: 26px;
+}
+form {
+  width: 400px;
+  margin-left: 100px;
+}
+input,
+textarea {
+  background: #F8EFDE;
+  width: 400px;
+  margin-bottom: 10px;
+}
+input {
+  height: 20px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 5px;
+  padding: 7px;
+}
+textarea {
+  height: 100px;
+  border: none;
+  border-radius: 5px;
+  margin-top: 5px;
+  padding: 7px;
+  font: #200E2C 16px;
+}
+button {
+  background: #9b5252;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 40px;
+  font: 16px 'Crimson Pro', serif;
+  color: #F8EFDE;
+
+}
+label {
+  font-size: 20px;
+}
+
+/* COLOUR PALETTE
+blush: #9b5252
+velvet: #200E2C
+buttercream: #F8EFDE
+caramel: #967352
+
+t/r/b/l, t/rl/b, tb/rl, tbrl
+*/
