@@ -98,7 +98,7 @@ nav img {
   border-radius: 7px;
   margin-right: 50px;
 }
-.window {
+.window a {
   display: flex;
   flex-direction: row;
 }
