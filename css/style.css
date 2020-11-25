@@ -144,6 +144,9 @@ nav img {
   font-size: 30px;
   font-weight: 400;
 }
+.bookshelf p {
+  margin-top: -100px;
+}
 .hover-grid {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
