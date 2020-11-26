@@ -296,7 +296,10 @@ button {
 label {
   font-size: 20px;
 }
-
+.contact-success {
+  margin-left: 100px;
+  font-style: italic;
+}
 /* COLOUR PALETTE
 blush: #9b5252
 velvet: #200E2C
