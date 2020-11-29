@@ -27,7 +27,7 @@
     </header>
 
     <main role="main" class="contact-info">
-      <p>Say hi! Find me on my socials, or tell me what's on your mind:<br><br>
+      <p>Say hi! Find me on my socials, or send me a message:<br><br>
       <a href="https://instagram.com/arlenewangg"><i class="fab fa-instagram-square fa-3x"></i></a>
       <a href="https://twitter.com/arlenewangg"><i class="fab fa-twitter-square fa-3x"></i></a>
       <a href="https://www.facebook.com/arlene.wang.129/"><i class="fab fa-facebook-square fa-3x"></i></a>
@@ -35,13 +35,13 @@
 
       <form method="POST" action="http://www.focuspocus.io/magic/486b72fa8d29c8a2c08288f6bb4b7520">
         <label for="name">Name</label>
-        <input id="name" type="text" name="name">
+        <input id="name" type="text" name="name" required>
 
         <label for="email">Email</label>
-        <input id="email" type="email" name="email">
+        <input id="email" type="email" name="email" required>
 
         <label for="message">Message</label>
-        <textarea id="message" name="message"></textarea>
+        <textarea id="message" name="message" placeholder="What's on your mind?" required></textarea>
 
         <button type="submit" value="Submit">Submit</button>
       </form>

@@ -27,7 +27,16 @@ body, .bookshelf p {
 header, main {
   margin: 0px 80px;
 }
-
+button {
+  display: flex;
+  justify-content: flex-end;
+  background: #9b5252;
+  border: none;
+  border-radius: 5px;
+  padding: 20px 40px;
+  font: 16px 'Crimson Pro', serif;
+  color: #F8EFDE;
+}
 /* HEADER STYLES */
 h1 {
   /* fallback */
@@ -92,12 +101,24 @@ nav img {
 .home-nav a {
   color: #F8EFDE;
 }
-
+nav .active {
+  color: #200E2C
+}
 /* IMAGE STYLES */
 .home-hearts {
   float: right;
   margin: 150px 150px 0px 50px;
   width: 300px;
+}
+.pagetop{
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.heart-pagetop {
+  height: 30px;
+  margin-right:10px;
 }
 .header-star{
   width: 52%;
@@ -112,12 +133,13 @@ nav img {
 }
 .window {
   display: flex;
-  flex-direction: row;
+  /* flex-direction: row; */
 }
 .window-container{
   width: 100%;
   text-align: center;
   font-size: 20px;
+  margin-bottom: 30px;
 }
 .window-container img{
   width: 50%;
@@ -281,6 +303,9 @@ textarea {
   background: #F8EFDE;
   width: 400px;
   margin-bottom: 10px;
+  font: 300 18px 'Crimson Pro', serif;
+  color: #200E2C;
+
 }
 input {
   height: 20px;
@@ -295,14 +320,18 @@ textarea {
   border-radius: 5px;
   margin-top: 5px;
   padding: 7px;
-  font: #200E2C 16px;
 }
-button {
+::placeholder {
+  font-family: 'Crimson Pro', serif;
+  font-weight: 300;
+  font-size: 18px;
+}
+form button {
   background: #9b5252;
   border: none;
   border-radius: 5px;
-  padding: 10px 40px;
-  font: 16px 'Crimson Pro', serif;
+  padding: 10px 20px;
+  font: 18px 'Crimson Pro', serif;
   color: #F8EFDE;
 }
 label {
