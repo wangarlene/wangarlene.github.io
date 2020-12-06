@@ -27,16 +27,7 @@ body, .bookshelf p {
 header, main {
   margin: 0px 80px;
 }
-button {
-  display: flex;
-  justify-content: flex-end;
-  background: #9b5252;
-  border: none;
-  border-radius: 5px;
-  padding: 20px 40px;
-  font: 16px 'Crimson Pro', serif;
-  color: #F8EFDE;
-}
+
 /* HEADER STYLES */
 h1 {
   /* fallback */
@@ -72,9 +63,15 @@ a {
   color: #F8EFDE;
 }
 a:hover {
-  filter: brightness(80%);
+  animation-name: color;
+  animation-duration: 500ms;
+  animation-fill-mode: forwards;
 }
-
+@keyframes color {
+  100%{
+    filter: brightness(80%);
+  }
+}
 /* NAV STYLES */
 nav {
   padding: 15px 480px;
@@ -124,6 +121,15 @@ nav .active {
   width: 52%;
   margin: 30px 20px 0px;
   float: right;
+  animation-name: twinkle;
+  animation-duration: 4s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+@keyframes twinkle {
+  50% {
+    opacity: 0.2;
+  }
 }
 .profile-img{
   width: 25%;
@@ -277,7 +283,6 @@ footer {
   color: #200E2C;
   display: flex;
   align-items: center;
-  justify-content: center;
   margin-top: auto;
   flex-direction: column;
   min-height: 100%;
@@ -326,13 +331,23 @@ textarea {
   font-weight: 300;
   font-size: 18px;
 }
-form button {
+ button {
   background: #9b5252;
   border: none;
   border-radius: 5px;
   padding: 10px 20px;
   font: 18px 'Crimson Pro', serif;
   color: #F8EFDE;
+}
+button:hover {
+  animation-name: color;
+  animation-duration: 500ms;
+  animation-fill-mode: forwards;
+}
+@keyframes color {
+  100%{
+    filter: brightness(80%);
+  }
 }
 label {
   font-size: 20px;
