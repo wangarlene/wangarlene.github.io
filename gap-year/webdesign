@@ -29,11 +29,19 @@
 
     <main role="main">
       <p>This website, in itself, is my best representation of my learning. Below, my second-best representation, through the resources I've used and things I've created:</p>
+      <!-- mouse icon -->
+      <div class="development">
+
+      </div>
+      <div class="design">
+
+      </div>
       Without UForChange's Graphic Design and Web Development program, this website would not exist. Look out for applications for their next cohort if you're a female- or nonbinary-identifiying youth!
       I'm advancing my coding knowledge with a little bit of Free Code Camp every day.
       Uxcel is a super digestible and genuinely entertaining way to learn UI/UX design.
       Look familiar? This is the personal branding I created to use on this website!
       Github's Student Developer pack is nothing short of a gem -- dozens and dozens of free resources like Canva Pro, Microsoft Azure, domain names, and courses just for being a university student!
+      
 
 
       <a class="pagetop" href="#pagetop">
