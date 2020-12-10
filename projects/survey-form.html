@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="../css/survey-form.css">
+    <title>Survey Form Project | Arlene Wang</title>
+  </head>
+  <body>
+    <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <header>
+      <h1 id="title">Jewelry for Justice Order Form</h1>
+      <p id="description">By donating to organizations advocating for black lives and racial equality, I'll send you a pair of handmade earrings or keychain.
+      </p>
+    </header>
+
+    <form action="" id="survey-form">
+      <div class="info">
+        <p>Delivery information:</p>
+
+        <label for="name" id="name-label">Full Name
+        <input type="text" id="name" name="name" placeholder="e.g. Jane Smith" required></label>
+
+        <label for="email" id="email-label"> Email
+          <input type="email" id="email" name="email" placeholder="e.g. janesmith@email.com" required></label>
+
+        <label for="number" id="number-label">Phone Number
+          <input type="number" id="number" name="number" placeholder="e.g. 1234567890" min="1000000000" max="9999999999"></label>
+
+         <label class="option" for="donation">
+           <input type="checkbox" value="donation" required>Yes, I've sent in my donation</label>
+         <label class="option" for="donation">
+           <input type="checkbox" value="shipping" required>Yes, I understand $2 will be used to cover shipping.</label><br>
+      </div>
+
+      <div class="customization">
+       <p>Jewelry customization:</p>
+        <label class="option" for="keychain-ball" id="keychain-ball-label">
+        <input type="radio" value="keychain-ball" name="jewelry-type" id="keychain-ball" required>Keychain (ball)</label>
+
+        <label class="option" for="keychain-cube" id="keychain-cube-label">
+        <input type="radio" value="keychain-cube" name="jewelry-type" id="keychain-cube" required>Keychain (cube)</label>
+
+        <label class="option" for="earrings" id="earrings-label">
+        <input type="radio" value="earrings" name="jewelry-type" id="earrings" required>Earrings</label>
+
+       <label for="dropdown">Choose a colour:
+       <select class="option" name="dropdown" id="dropdown">
+         <option value="pink">Pink</option>
+         <option value="purple">Purple</option>
+         <option value="blue">Blue</option>
+         <option value="multicolour">Multicolour</option>
+         <option value="none">No preference</option></select></label>
+
+        <label for="comments">Additional comments:
+        <textarea name="comments" id="comments" cols="" rows=""></textarea></label>
+
+       <button type="submit">Submit Order</button>
+     </div>
+    </form>
+
+  </body>
+</html>
