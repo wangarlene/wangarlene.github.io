@@ -198,7 +198,7 @@ nav .active {
     height: 100%;
     object-fit: cover;
 }
- 
+
 /* Original image */
 .container .hover-grid-img{
  display: block;
@@ -273,7 +273,22 @@ li{
 
 /* HOMEPAGE BACKGROUND*/
 .home-bg {
-  background: url(../images/home-bg.png);
+  background-image:
+  url(../images/home-flower),
+  url(../images/home-flower),
+  url(../images/home-flower),
+  url(../images/home-flower),
+  url(../images/home-flower),
+  url(../images/home-star),
+  url(../images/home-star),
+  url(../images/home-star),
+  url(../images/home-star),
+  url(../images/home-star),
+  url(../images/home-star),
+  url(../images/home-star),
+  url(../images/home-star),
+  #9b5252;
+  height:100vh;
   background-size: contain;
   background-repeat: no-repeat;
 }
