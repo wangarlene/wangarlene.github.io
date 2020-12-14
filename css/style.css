@@ -94,12 +94,7 @@ nav img {
   top: 15px; left: 15px;
   width: 32px;
 }
-/* .home-nav {
-  background: transparent;
-}
-.home-nav a {
-  color: #F8EFDE;
-} */
+
 nav .active {
   color: #200E2C
 }
