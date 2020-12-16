@@ -269,22 +269,13 @@ li{
 /* HOMEPAGE BACKGROUND*/
 .home-bg {
   background-image:
-  url(../images/home-flower),
-  url(../images/home-flower),
-  url(../images/home-flower),
-  url(../images/home-flower),
-  url(../images/home-flower),
-  url(../images/home-star),
-  url(../images/home-star),
-  url(../images/home-star),
-  url(../images/home-star),
-  url(../images/home-star),
-  url(../images/home-star),
-  url(../images/home-star),
-  url(../images/home-star),
+  margin:0;
+  background:
+  url(../images/home-pattern.png),
   #9b5252;
   height:100vh;
-  background-size: contain;
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
 }
 
