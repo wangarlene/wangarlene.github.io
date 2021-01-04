@@ -2,8 +2,8 @@
 /*GLOBAL STYLES*/
 html {
   height:100%;
-  margin: 0px;
-  padding: 0px;
+  margin: 0;
+  padding: 0;
 }
 body, .bookshelf p {
   /* fallback */
@@ -26,9 +26,13 @@ body, .bookshelf p {
   min-height: 100%;
 }
 header, main {
-  margin: 0px 80px;
+  margin: 0 10vw;
 }
-
+@media (min-width:1200px) {
+  header, main {
+    margin: 0 5vw;
+  }
+}
 /* HEADER STYLES */
 h1 {
   /* fallback */
@@ -268,23 +272,14 @@ li{
 
 /* HOMEPAGE BACKGROUND*/
 .home-bg {
-  background-image:
-  url(../images/home-flower),
-  url(../images/home-flower),
-  url(../images/home-flower),
-  url(../images/home-flower),
-  url(../images/home-flower),
-  url(../images/home-star),
-  url(../images/home-star),
-  url(../images/home-star),
-  url(../images/home-star),
-  url(../images/home-star),
-  url(../images/home-star),
-  url(../images/home-star),
-  url(../images/home-star),
+  margin:0;
+  background:
+  url(../images/home-pattern.png),
   #9b5252;
+  /* position: fixed, static; */
   height:100vh;
-  background-size: contain;
+  background-size: cover;
+  background-position: center;
   background-repeat: no-repeat;
 }
 
@@ -306,37 +301,59 @@ i {
 }
 .contact-info{
   display:flex;
-  flex-direction: row;
+  flex-direction: column;
+  flex-wrap: wrap;
+}
+@media (min-width: 1200px) {
+  .contact-info{
+    flex-direction: row;
+  }
 }
 .contact-info p{
   font-size: 26px;
 }
-form {
-  width: 400px;
-  margin-left: 100px;
+form label{
+  /* width: 70vw; */
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 1200px) {
+  form {
+    margin-left: 100px;
+  }
 }
 input,
 textarea {
   background: #F8EFDE;
-  width: 400px;
   margin-bottom: 10px;
   font: 300 18px 'Crimson Pro', serif;
   color: #200E2C;
 
 }
+input,textarea {
+  width: 75vw;
+  margin-top: 5px;
+}
+@media (min-width: 1200px) {
+  input,textarea {
+    width: 25vw;
+    margin-top: 5px;
+  }
+}
 input {
-  height: 20px;
+  height: 2vh;
   border: none;
   border-radius: 5px;
-  margin-top: 5px;
-  padding: 7px;
+
+  padding: 1vh;
 }
 textarea {
-  height: 100px;
+  height: 15vh;
   border: none;
   border-radius: 5px;
-  margin-top: 5px;
-  padding: 7px;
+
+  padding: 1vh;
 }
 ::placeholder {
   font-family: 'Crimson Pro', serif;
@@ -347,7 +364,7 @@ textarea {
   background: #9b5252;
   border: none;
   border-radius: 5px;
-  padding: 10px 20px;
+  padding: 1.5vh 1.5vw;
   font: 18px 'Crimson Pro', serif;
   color: #F8EFDE;
 }
@@ -363,6 +380,8 @@ button:hover {
 }
 label {
   font-size: 20px;
+  display: flex;
+  flex-direction: column;
 }
 .contact-success {
   margin-left: 100px;
@@ -378,7 +397,7 @@ label {
 @media (min-width: 600px) {
   body, .bookshelf p {
     /* fallback */
-    font-family: Georgia;
+    /* font-family: Georgia;
     line-height: 1.6;
     letter-spacing: -0.9px;
     word-spacing: -0.2px;
@@ -393,7 +412,7 @@ label {
     margin:0px;
     display: flex;
     flex-direction: column;
-    min-height: 100%;
+    min-height: 100%; */
   }
 }
 @media (min-width: 900px) {
