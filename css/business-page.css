@@ -1,0 +1,177 @@
+html {
+  font: 300 1em "DM Sans", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+a {
+  text-decoration: none;
+  font-weight: 500;
+}
+body {
+  background-color: #fff4f4;
+}
+
+#header-img {
+  position: fixed;
+  left: 1vh;
+  top: 1vh;
+  width: 3vw;
+}
+nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  background-color: #d4dff5;
+}
+h1,
+p,
+a {
+  color: #001069;
+}
+h1 {
+  font-weight: 700;
+  text-align: center;
+  font-size: 5em;
+}
+p {
+  margin: 6vw;
+}
+.nav-link {
+  padding: 1.5vw;
+  text-decoration: none;
+  font-style: italic;
+  font-size: 2em;
+}
+
+.donations {
+  background-color: #001069;
+  color: #d4dff5;
+  width: 50%;
+  padding: 3vh;
+  display: flex;
+  justify-items: center;
+  flex-direction: column;
+}
+
+.landing-img {
+  width: 20vw;
+}
+#video {
+  width: 50vw;
+}
+.landing {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+.landing-left,
+.landing-right {
+  display: flex;
+  flex-direction: column;
+}
+.landing-left {
+  width: 20vw;
+}
+.landing-right {
+  width: 50vw;
+}
+#pricing {
+  display: flex;
+  justify-content: space-evenly;
+}
+@media (max-width: 600px) {
+  #pricing {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.product {
+  background-color: #d4dff5;
+  width: 30vw;
+  margin-bottom: 5vw;
+  text-align: center;
+  border-radius: 0.3em;
+}
+@media (max-width: 600px) {
+  .product {
+    width: 80%;
+    align-self: center;
+  }
+}
+
+.product p {
+  margin: 3% 0;
+}
+
+.product-img {
+  border-radius: 0.3em 0.3em 0 0;
+  width: 30vw;
+}
+@media (max-width: 600px) {
+  .product-img {
+    display: flex;
+    width: 100%;
+  }
+}
+.form-bg {
+  background-color: #d4dff5;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 0;
+}
+form {
+  background-color: #fff4f4;
+  padding: 3vh;
+  margin: 10vw 0;
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 0.3em;
+  width: 50vw;
+}
+
+button,
+input {
+  border: none;
+  width: 50%;
+  font: 300 1em "DM Sans", sans-serif;
+  margin: 1vh;
+  padding: 1vh;
+
+  justify-content: center;
+  border-radius: 0.3em;
+}
+button,
+#submit {
+  background-color: #001069;
+  color: #d4dff5;
+
+  align-self: center;
+  border-radius: 0.3em;
+}
+.order-button {
+  display: flex;
+  justify-content: center;
+  max-width: 30%;
+  /* why does center alignment move when width is set */
+}
+footer {
+  background-color: #001069;
+  color: #d4dff5;
+  text-align: center;
+  padding: 2vh 0;
+
+  bottom: -1;
+  width: 100%;
+  margin: 0;
+}
+footer a {
+  color: #d4dff5;
+  font-style: italic;
+}

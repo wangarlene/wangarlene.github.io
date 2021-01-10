@@ -1,34 +1,55 @@
+h1 {
+  font-size: 100px;
+  margin: 20px 0;
+}
+p,
+li {
+  font: 16px sans-serif;
+}
 .nav-link {
-    display:block;
+  display: block;
+}
+.nav-link,
+#navbar,
+.main-section header {
+  font: 20px/1.3 monospace;
+}
+.nav-link,
+#navbar {
+  color: white;
+}
+.main-section header {
+  color: crimson;
+}
+#navbar {
+  background-color: crimson;
 
-  }
-#navbar{
-   position:fixed;
-   background-color:gray;
-   left:0vw;
-   padding: 2vw;
-   top:-1vw;
+  padding: 0px 30px 25px;
 }
 @media (min-width: 800px) {
- #main-doc {
-   position:absolute;
-   float:right;
-    left: 280px;
-
+  #main-doc {
+    position: absolute;
+    float: right;
+    left: 420px;
+    margin-right: 40px;
   }
 
   #navbar {
-    float:left;
-    height:100%;
+    float: left;
+    height: 100%;
+    position: fixed;
+    top: -1vw;
+    left: 0vw;
   }
-
 }
-@media (max-width:799px) {
-	#navbar{
-    width:100%;
-}
-  #main-doc{
-    position:absolute;
-    top:160px;
+@media (max-width: 799px) {
+  #navbar {
+    width: 100%;
+    position: absolute;
+    top: 0vw;
+    left: 0vw;
+  }
+  #main-doc {
+    margin: 215px 5px 20px;
   }
 }
