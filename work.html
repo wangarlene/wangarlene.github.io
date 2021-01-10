@@ -18,14 +18,19 @@
 
   <body>
     <nav>
-      <a href="index.html">
-        <img src="images/nav-logo.png" alt="Arlene Wang logo" />
-      </a>
-      <a href="index.html">home</a>
-      <a href="about.html">about</a>
-      <a href="work.html">work</a>
-      <a href="gap-year.html">gap year</a>
-      <a href="contact.html">contact</a>
+      <div class="nav" id="navMenu">
+        <a href="index.html">
+          <img src="images/nav-logo.png" alt="Arlene Wang logo" />
+        </a>
+        <a href="index.html">home</a>
+        <a href="about.html">about</a>
+        <a href="work.html">work</a>
+        <a href="gap-year.html">gap year</a>
+        <a href="contact.html">contact</a>
+        <button class="menu-icon" onclick="openMenu()">
+          <i class="fa fa-bars fa-3x"></i>
+        </button>
+      </div>
     </nav>
 
     <header>
@@ -41,7 +46,7 @@
       <br />
       <div class="projects">
         <div class="project-right">
-          <a href="projects/order-form.html"
+          <a href="projects/order-form.html" target="_blank"
             ><img
               src="images/order-form.jpg"
               alt="Image preview of the JFJ Order Form project."
@@ -56,12 +61,12 @@
         </div>
 
         <div class="project-left">
-          <a href="projects/technical-doc.html"
+          <a href="projects/technical-doc.html" target="_blank"
             ><img
               src="images/technical-doc.jpg"
               alt="Image preview of the HTML Technical Documentation project."
           /></a>
-          <a href="projects/technical-doc.html"
+          <a href="projects/technical-doc.html" target="_blank"
             ><h2>HTML Technical Documentation</h2></a
           >
           <p>CSS3 | HTML5</p>
@@ -73,7 +78,7 @@
         </div>
 
         <div class="project-right">
-          <a href="projects/brandguide.pdf"
+          <a href="projects/brandguide.pdf" target="_blank"
             ><img src="images/brandguide.jpg" alt="Arlene Wang full logo"
           /></a>
           <a href="projects/brandguide.pdf"><h2>Personal Branding Guide</h2></a>
@@ -97,5 +102,6 @@
     <footer>
       <p>Copyright © 2020 Arlene Wang • All rights reserved • Made with ♥︎</p>
     </footer>
+    <script src="script.js"></script>
   </body>
 </html>
