@@ -17,19 +17,24 @@
   </head>
 
   <body>
-    <nav id="pagetop">
-      <a href="../index.html">
-        <img src="../images/nav-logo.png" alt="Arlene Wang logo" />
-      </a>
-      <a href="../index.html">home</a>
-      <a href="../about.html">about</a>
-      <a href="../work.html">work</a>
-      <a href="../gap-year.html">gap year</a>
-      <a href="../contact.html">contact</a>
+    <nav>
+      <div class="nav" id="navMenu">
+        <a href="../index.html">
+          <img src="../images/nav-logo.png" alt="Arlene Wang logo" />
+        </a>
+        <a href="../index.html">home</a>
+        <a href="../about.html">about</a>
+        <a href="../work.html">work</a>
+        <a href="../gap-year.html">gap year</a>
+        <a href="../contact.html">contact</a>
+        <button class="menu-icon" onclick="openMenu()">
+          <i class="fa fa-bars fa-3x"></i>
+        </button>
+      </div>
     </nav>
 
-    <header>
-      <a href="../work.html"
+    <header id="pagetop">
+      <a href="../gap-year.html"
         ><img
           class="heart-back"
           src="../images/heart-back.png"
@@ -99,5 +104,6 @@
     <footer>
       <p>Copyright © 2020 Arlene Wang • All rights reserved • Made with ♥︎</p>
     </footer>
+    <script src="../script.js"></script>
   </body>
 </html>
