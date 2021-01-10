@@ -1,61 +1,94 @@
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="css/style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,500;1,300;1,500&family=Yeseva+One&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/3bb054fa84.js" crossorigin="anonymous"></script>
-    <!-- <script src="menu.js"></script> -->
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Crimson+Pro:ital,wght@0,300;0,500;1,300;1,500&family=Yeseva+One&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/3bb054fa84.js"
+      crossorigin="anonymous"
+    ></script>
 
     <title>contact | Arlene Wang</title>
   </head>
 
   <body>
     <nav>
-      <a href="index.html">
-        <img src="images/nav-logo.png" alt="Arlene Wang logo">
-      </a>
-      <!-- <div id="links"> -->
-        <a href="index.html">home</a>
-        <a href="about.html">about</a>
-        <a href="work.html">work</a>
-        <a href="gap-year.html">gap year</a>
-        <a href="contact.html">contact</a>
-      <!-- </div> -->
-      <!-- <a href="javascript:void(0);" class="menu-icon" onclick="mobileMenu()"> -->
-        <!-- <i class="fa fa-bars fa-3x"></i> -->
-      </a>
+      <div class="nav" id="navMenu">
+        <a href="index.html">
+          <img src="images/nav-logo.png" alt="Arlene Wang logo" />
+        </a>
+        <a class="nav-links" href="index.html">home</a>
+        <a class="nav-links" href="about.html">about</a>
+        <a class="nav-links" href="work.html">work</a>
+        <a class="nav-links" href="gap-year.html">gap year</a>
+        <a class="nav-links" href="contact.html">contact</a>
+        <button class="menu-icon" onclick="openMenu()">
+          <i class="fa fa-bars fa-3x"></i>
+        </button>
+      </div>
     </nav>
 
     <header>
-      <img class="header-star" src="images/header-star.png" align="right" alt="">
+      <img
+        class="header-star"
+        src="images/header-star.png"
+        align="right"
+        alt=""
+      />
       <h1>contact</h1>
     </header>
 
     <main role="main" class="contact-info">
-      <p>Say hi! Find me on my socials, or send me a message:<br><br>
-      <a target="_blank" href="https://instagram.com/arlenewangg"><i class="fab fa-instagram-square fa-3x"></i></a>
-      <a target="_blank" href="https://twitter.com/arlenewangg"><i class="fab fa-twitter-square fa-3x"></i></a>
-      <a target="_blank" href="https://www.facebook.com/arlene.wang.129/"><i class="fab fa-facebook-square fa-3x"></i></a>
-      <a target="_blank" href="https://www.linkedin.com/in/arlene-wang-4497a71a2/"><i class="fab fa-linkedin fa-3x"></i></a>
+      <p>
+        Say hi! Find me on my socials, or send me a message:<br /><br />
+        <a target="_blank" href="https://instagram.com/arlenewangg"
+          ><i class="fab fa-instagram-square fa-3x"></i
+        ></a>
+        <a target="_blank" href="https://twitter.com/arlenewangg"
+          ><i class="fab fa-twitter-square fa-3x"></i
+        ></a>
+        <a target="_blank" href="https://www.facebook.com/arlene.wang.129/"
+          ><i class="fab fa-facebook-square fa-3x"></i
+        ></a>
+        <a
+          target="_blank"
+          href="https://www.linkedin.com/in/arlene-wang-4497a71a2/"
+          ><i class="fab fa-linkedin fa-3x"></i
+        ></a>
+      </p>
 
-      <form method="POST" action="http://www.focuspocus.io/magic/486b72fa8d29c8a2c08288f6bb4b7520">
-        <label for="name">Name<input id="name" type="text" name="name" required></label>
+      <form
+        method="POST"
+        action="http://www.focuspocus.io/magic/486b72fa8d29c8a2c08288f6bb4b7520"
+      >
+        <label for="name"
+          >Name<input id="name" type="text" name="name" required
+        /></label>
 
-        <label for="email">Email<input id="email" type="email" name="email" required></label>
+        <label for="email"
+          >Email<input id="email" type="email" name="email" required
+        /></label>
 
-
-        <label for="message">Message<textarea id="message" name="message" placeholder="What's on your mind?" required></textarea></label>
-
+        <label for="message"
+          >Message<textarea
+            id="message"
+            name="message"
+            placeholder="What's on your mind?"
+            required
+          ></textarea>
+        </label>
 
         <button type="submit" value="Submit">Submit</button>
       </form>
     </main>
 
     <footer>
-      <p> Copyright © 2020 Arlene Wang • All rights reserved • Made with ♥︎</p>
+      <p>Copyright © 2020 Arlene Wang • All rights reserved • Made with ♥︎</p>
     </footer>
-
+    <script src="script.js"></script>
   </body>
 </html>
