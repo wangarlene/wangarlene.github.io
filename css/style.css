@@ -80,18 +80,19 @@ a:hover {
 }
 /* NAV STYLES */
 nav {
-  padding: 15px 480px;
+  padding: 1vw 0vw;
   text-decoration: none;
   font: italic 500 18px serif;
   text-align: center;
   background: #f8efde;
   display: flex;
-  justify-content: space-around;
+  justify-content: center;
   align-items: center;
 }
 nav a {
   color: #9b5252;
   font-size: 24px;
+  margin: 0 15px;
 }
 nav img {
   position: absolute;
@@ -186,42 +187,42 @@ nav .active {
   margin-top: 150px;
   font-size: 30px;
   font-weight: 400;
-  margin-bottom: -125px;
 }
 .projects {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
   margin: 0 100px 50px;
+  flex-wrap: wrap;
 }
 .projects img {
   width: 430px;
 }
 .project-left,
 .project-right {
-  margin-bottom: 20px;
-  align-content: flex-start;
+  margin-bottom: 60px;
+  align-items: flex-start;
   width: 90%;
 }
 /* TODO: align text to img top, center projects div, increase margin btwn projects  */
 .project-left img {
   float: left;
-  /* margin: 20px 30px 0px 100px; */
+  margin-right: 20px;
 }
 .project-right img {
   float: right;
-  /* margin: 20px 100px 0px 30px; */
+  margin-left: 20px;
   text-align: right;
 }
 .project-right p,
 .project-right h2 {
   text-align: right;
 }
-.projectshelf h2 {
-  margin: 0px;
-  margin-top: 150px;
+.projects h2 {
   font-size: 30px;
   font-weight: 400;
-  margin-bottom: -125px;
+  margin: 0;
 }
 
 .hover-grid {
