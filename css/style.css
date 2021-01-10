@@ -512,14 +512,14 @@ label {
     letter-spacing: -0.9px;
     word-spacing: -0.2px;
 
-    background: #200E2C;
-    font-family: 'Crimson Pro', serif;
+    background: #200e2c;
+    font-family: "Crimson Pro", serif;
     font-weight: 300;
     line-height: 1.2;
     letter-spacing: 0px;
     word-spacing: 0px;
-    color: #F8EFDE;
-    margin:0px;
+    color: #f8efde;
+    margin: 0px;
     display: flex;
     flex-direction: column;
     min-height: 100%; 
