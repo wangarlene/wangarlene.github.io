@@ -269,6 +269,11 @@ footer p {
 .home-heading {
   font-size: 100px;
 }
+@media (max-width: 800px) {
+  .home-heading {
+    font-size: 70px;
+  }
+}
 /* FIXME: reordering home-bg with .home-heading, etc. causes font-size to shrink/background to disappear/flex not being able to be applied? may have to do with nav not being able to be includied in header anymore, and landing viewport height is not 100 anymore*/
 .home-hearts {
   /* float: right; */
