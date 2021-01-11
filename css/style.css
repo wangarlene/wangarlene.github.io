@@ -1,4 +1,12 @@
-/*GLOBAL STYLES*/
+/* FIXME: fix instances of flex */
+
+/* ||| COLOUR PALETTE |||
+blush: #9b5252
+velvet: #200E2C
+buttercream: #F8EFDE
+*/
+
+/* ||| ELEMENTS |||*/
 html {
   height: 100%;
   margin: 0;
@@ -29,13 +37,13 @@ header,
 main {
   margin: 0 10vw;
 }
-@media (min-width: 1200px) {
+/* @media (min-width: 1200px) {
   header,
   main {
     margin: 0 5vw;
   }
-}
-/* HEADER STYLES */
+} */
+/*>|| TITLE STYLES >||*/
 h1 {
   /* fallback */
   font-family: Georgia;
@@ -50,18 +58,8 @@ h2 {
   font-weight: 300;
   font-size: 30px;
 }
-.home-heading {
-  text-align: center;
-  padding: 300px 300px 30px;
-  font-size: 100px;
-  margin-top: 0px;
-}
-.home-subheading {
-  text-align: center;
-  margin-bottom: 270px;
-}
 
-/* LINK STYLES */
+/*>|| LINK STYLES >||*/
 a {
   text-decoration: none;
   font-style: italic;
@@ -78,9 +76,24 @@ a:hover {
     filter: brightness(80%);
   }
 }
-/* NAV STYLES */
+
+/* >|| LIST STYLES >||*/
+ul {
+  list-style: none;
+}
+ul li:before {
+  content: "♥︎";
+  font-size: 10px;
+  margin-left: -20px;
+}
+li {
+  font-size: 20px;
+  line-height: 1.3;
+  font-weight: 400;
+}
+/* >|| NAV STYLES >||*/
 nav {
-  padding: 1.5vh 0vw;
+  padding: 13px 0;
   text-decoration: none;
   font: italic 500 18px serif;
   text-align: center;
@@ -92,8 +105,21 @@ nav {
 nav a {
   color: #9b5252;
   font-size: 24px;
-  margin: 0 15px;
+  margin: 0 20px;
 }
+
+nav img {
+  position: absolute;
+  top: 12px;
+  left: 10px;
+  width: 32px;
+  /* may be combined with the mobile menu styles** */
+}
+
+nav .active {
+  color: #200e2c;
+}
+
 .menu-icon {
   display: none;
 }
@@ -115,9 +141,7 @@ nav a {
     font: 9px "Crimson Pro", serif;
     color: #9b5252;
   }
-  /* .nav.mobile {
-    position: relative;
-  } */
+
   .nav.mobile .menu-icon {
     position: absolute;
     top: 12px;
@@ -167,33 +191,21 @@ nav a {
     display: none;
   }
 } */
-nav img {
-  position: absolute;
-  top: 12px;
-  left: 10px;
-  width: 32px;
-  /* may be combined with the mobile menu styles** */
-}
 
-nav .active {
+/* >|| FOOTER STYLES >||*/
+footer {
+  background: #f8efde;
   color: #200e2c;
-}
-/* IMAGE STYLES */
-.home-hearts {
-  float: right;
-  margin: 150px 150px 0px 50px;
-  width: 300px;
-}
-.pagetop {
   display: flex;
-  justify-content: flex-end;
   align-items: center;
-  margin-bottom: 20px;
+  flex-direction: column;
+  min-height: 100%;
+  padding: 0 5vw;
 }
-.heart-pagetop {
-  height: 30px;
-  margin-right: 10px;
+footer p {
+  text-align: center;
 }
+/* |||CONTENT PAGE STYLES |||*/
 .header-star {
   width: 52%;
   margin: 30px 20px 0px;
@@ -208,60 +220,118 @@ nav .active {
     opacity: 0.2;
   }
 }
-.profile-img {
-  width: 25%;
-  float: left;
-  border-radius: 7px;
-  margin-right: 50px;
-}
-.window {
-  display: flex;
-  /* flex-direction: row; */
-}
-.window-container {
-  width: 100%;
-  text-align: center;
-  font-size: 20px;
-  margin-bottom: 30px;
-}
-.window-container img {
-  width: 50%;
-}
 .heart-back {
   width: 30px;
   position: relative;
   top: 125px;
   right: 55px;
 }
-.bookshelf {
+.pagetop {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.heart-pagetop {
+  height: 30px;
+  margin-right: 10px;
+}
+|||/* PAGE STYLES */
+  /* >|| HOMEPAGE STYLES >|| */
+.home-bg {
+  margin: 0;
+  background: url(../images/home-pattern.png), #9b5252;
+
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   display: flex;
   flex-direction: column;
-  align-content: center;
-  margin-bottom: 50px;
+  justify-content: center;
 }
-.bookshelf img {
-  width: 250px;
+.home-heading,
+.home-subheading {
+  text-align: center;
+}
+.home-bg {
+  margin: 0;
+  background: url(../images/home-pattern.png), #9b5252;
+  /* position: fixed, static; */
+  height: 94vh;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.home-heading {
+  font-size: 100px;
+}
+/* FIXME: reordering home-bg with .home-heading, etc. causes font-size to shrink/background to disappear/flex not being able to be applied? may have to do with nav not being able to be includied in header anymore, and landing viewport height is not 100 anymore*/
+.home-hearts {
+  /* float: right; */
+  max-width: 50vw;
+  max-height: 50vh;
+}
+@media (min-width: 801px) {
+  .home-intro {
+    display: flex;
+    flex-direction: row-reverse;
+    min-height: 100vh;
+    justify-content: space-around;
+    align-items: center;
+  }
+  .home-text {
+    width: 45vw;
+  }
+}
+@media (max-width: 800px) {
+  .home-intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10vh 10vw;
+  }
 }
 
-.book-left img {
+.home-intro p {
+  text-align: left;
+  line-height: 1.6;
+  font-size: 24px;
+  display: flex;
+  flex-direction: column;
+}
+/* TODO: edit for homepage list */
+.home-intro ul {
+  padding-left: 17px;
+}
+.home-intro ul li:before {
+  content: "♥︎";
+  font-size: 16px;
+}
+.home-intro li {
+  font-size: 24px;
+  line-height: 1.6;
+  font-weight: 300;
+}
+/* >|| ABOUT >||*/
+.bio1,
+.bio2 {
+  text-align: end;
+  font-size: 26px;
+}
+.bio1 {
+  font-style: italic;
+}
+.profile-img {
+  width: 25%;
   float: left;
-  margin: 20px 30px 0px 100px;
+  border-radius: 7px;
+  margin-right: 50px;
 }
-.book-right img {
-  float: right;
-  margin: 20px 100px 0px 30px;
-  text-align: right;
-}
-.book-right p,
-.book-right h3 {
-  text-align: right;
-}
-.bookshelf h3 {
-  margin: 0px;
-  margin-top: 150px;
-  font-size: 30px;
-  font-weight: 400;
-}
+/* >||WORK >||*/
 .projects {
   display: flex;
   flex-direction: column;
@@ -298,7 +368,53 @@ nav .active {
   font-weight: 400;
   margin: 0;
 }
+/* >||GAP-YEAR >||*/
+.window {
+  display: flex;
+  /* flex-direction: row; */
+}
+.window-container {
+  width: 100%;
+  text-align: center;
+  font-size: 20px;
+  margin-bottom: 30px;
+}
+.window-container img {
+  width: 50%;
+}
 
+/* >||BOOKSHELF >||*/
+.bookshelf {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  margin-bottom: 50px;
+}
+.bookshelf img {
+  width: 250px;
+}
+
+.book-left img {
+  float: left;
+  margin: 20px 30px 0px 100px;
+}
+.book-right img {
+  float: right;
+  margin: 20px 100px 0px 30px;
+  text-align: right;
+}
+.book-right p,
+.book-right h3 {
+  text-align: right;
+}
+.bookshelf h3 {
+  margin: 0px;
+  margin-top: 150px;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+/*>|| GRIDS >||*/
 .hover-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -347,21 +463,8 @@ nav .active {
   width: 100%;
 }
 
-/* TEXT STYLES */
-.home-intro p {
-  text-align: left;
-  line-height: 1.6;
-  font-size: 24px;
-  padding: 200px 0px 200px 150px;
-}
-.bio1,
-.bio2 {
-  text-align: end;
-  font-size: 26px;
-}
-.bio1 {
-  font-style: italic;
-}
+/*>|| WALL >||*/
+
 .quote-left,
 .quote-right {
   font-size: 40px;
@@ -371,44 +474,7 @@ nav .active {
   margin-left: 150px;
 }
 
-/* LIST STYLES */
-ul {
-  list-style: none;
-}
-ul li:before {
-  content: "♥︎";
-  font-size: 10px;
-  margin-left: -20px;
-}
-li {
-  font-size: 20px;
-  line-height: 1.3;
-  font-weight: 400;
-}
-
-/* HOMEPAGE BACKGROUND*/
-.home-bg {
-  margin: 0;
-  background: url(../images/home-pattern.png), #9b5252;
-  /* position: fixed, static; */
-  height: 100vh;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-}
-
-/* FOOTER STYLES */
-footer {
-  background: #f8efde;
-  color: #200e2c;
-  display: flex;
-  align-items: center;
-  margin-top: auto;
-  flex-direction: column;
-  min-height: 100%;
-}
-
-/* CONTACT STYLES*/
+/* >|| CONTACT/FORM STYLES >|| */
 i {
   margin-right: 10px;
 }
@@ -502,37 +568,13 @@ label {
   font-style: italic;
 }
 
-@media (max-width: 599px) {
+/* @media (max-width: 599px) {
 }
 @media (min-width: 600px) {
-  /*body, .bookshelf p {
-     fallback */
-  /* font-family: Georgia;
-    line-height: 1.6;
-    letter-spacing: -0.9px;
-    word-spacing: -0.2px;
-
-    background: #200e2c;
-    font-family: "Crimson Pro", serif;
-    font-weight: 300;
-    line-height: 1.2;
-    letter-spacing: 0px;
-    word-spacing: 0px;
-    color: #f8efde;
-    margin: 0px;
-    display: flex;
-    flex-direction: column;
-    min-height: 100%; 
-  }*/
 }
 @media (min-width: 900px) {
 }
 @media (min-width: 1200px) {
 }
 @media (min-width: 1800px) {
-}
-/* COLOUR PALETTE
-blush: #9b5252
-velvet: #200E2C
-buttercream: #F8EFDE
-*/
+} */
