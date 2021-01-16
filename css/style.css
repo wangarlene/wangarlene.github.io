@@ -28,14 +28,21 @@ body,
   letter-spacing: 0px;
   word-spacing: 0px;
   color: #f8efde;
-  margin: 0px;
+  margin: 0;
   display: flex;
   flex-direction: column;
   min-height: 100%;
 }
+p {
+  margin-top: 0;
+}
+/* TODO: make separate font-sizing for one-line text (e.g. contact or about descriptions) vs paragrpahs */
 header,
 main {
   margin: 0 10vw;
+}
+main {
+  margin-bottom: 7vh;
 }
 /* @media (min-width: 1200px) {
   header,
@@ -206,18 +213,13 @@ footer {
   background: #f8efde;
   color: #200e2c;
   /* min-height: 100%; */
-  padding: 0 5vw;
+  padding: 1vh 5vw;
 }
-@media (min-width: 601px) {
-  /* footer {
-    position: relative;
-    left: 0;
-    bottom: 0;
-    right: 0;
-  } */
-}
+
 footer p {
   text-align: center;
+  margin-bottom: 0;
+  font-size: 17px;
 }
 /* |||CONTENT PAGE STYLES |||*/
 .header-star {
@@ -264,6 +266,7 @@ footer p {
   flex-direction: column;
   justify-content: center;
 }
+/* TODO: change bg for mobile */
 .home-heading,
 .home-subheading {
   text-align: center;
@@ -339,19 +342,48 @@ footer p {
   font-weight: 300;
 }
 /* >|| ABOUT >||*/
+.about-wrapper {
+  display: flex;
+  flex-direction: row;
+}
+
+.bio {
+  flex-direction: column;
+}
 .bio1,
 .bio2 {
-  text-align: end;
   font-size: 26px;
 }
 .bio1 {
   font-style: italic;
+  margin-top: 0;
 }
+
 .profile-img {
-  width: 25%;
-  float: left;
+  width: 30%;
+  height: 30%;
   border-radius: 7px;
   margin-right: 50px;
+}
+@media (min-width: 1000px) {
+  .profile-img {
+    width: 20%;
+  }
+}
+@media (max-width: 800px) {
+  .about-wrapper {
+    flex-direction: column-reverse;
+    align-items: center;
+    justify-items: flex-start;
+  }
+  .profile-img {
+    width: 50%;
+  }
+}
+@media (max-width: 500px) {
+  .profile-img {
+    width: 90%;
+  }
 }
 /* >||WORK >||*/
 .projects {
@@ -391,18 +423,28 @@ footer p {
   margin: 0;
 }
 /* >||GAP-YEAR >||*/
-.window {
+.window-wrapper {
   display: flex;
-  /* flex-direction: row; */
 }
-.window-container {
+
+.window {
   width: 100%;
   text-align: center;
   font-size: 20px;
   margin-bottom: 30px;
 }
-.window-container img {
+.window img {
   width: 50%;
+}
+@media (max-width: 800px) {
+  .window-wrapper {
+    /* flex-direction:column; */
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .window img {
+    width: 30%;
+  }
 }
 
 /* >||BOOKSHELF >||*/
@@ -569,6 +611,17 @@ button {
   padding: 1.5vh 1.5vw;
   font: 18px "Crimson Pro", serif;
   color: #f8efde;
+  margin-top: 5px;
+}
+@media (max-width: 450px) {
+  .contact-info i {
+    font-size: 60px;
+  }
+}
+@media (min-width: 451px) {
+  .contact-info i {
+    font-size: 70px;
+  }
 }
 button:hover {
   animation-name: color;
