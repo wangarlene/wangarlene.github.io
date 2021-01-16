@@ -372,7 +372,7 @@ footer p {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  margin: 0 8vw 50px;
+  margin-bottom: 50px;
   flex-wrap: wrap;
   width: 100%;
 }
