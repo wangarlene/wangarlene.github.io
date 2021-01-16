@@ -12,8 +12,7 @@ html {
   margin: 0;
   padding: 0;
 }
-body,
-.bookshelf p {
+body {
   /* fallback */
   font-family: Georgia;
   line-height: 1.6;
@@ -372,13 +371,15 @@ footer p {
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  margin: 0 8vw 50px;
+  margin-bottom: 50px;
   flex-wrap: wrap;
   width: 100%;
 }
 .projects img {
   width: 430px;
+  border-radius: 5px;
 }
+
 .project-desc {
   display: flex;
   flex-direction: column;
@@ -395,8 +396,11 @@ footer p {
 .project-right {
   flex-direction: row-reverse;
 }
-
-
+.book-left,
+.book-right {
+  width: 200px !important;
+}
+/* TODO: separate books from projects, here .book images are being overridden? horizontally centre each container, add margin below image */
 /* TODO: align text to img top, center projects div, increase margin btwn projects  */
 .project-left img {
   float: left;
@@ -419,21 +423,22 @@ footer p {
 @media (max-width: 1000px) {
   .projects {
     margin-left: 0;
-  
   }
- 
+
   .project-left,
   .project-right {
     flex-direction: column;
-  
   }
-  .project-left img, .project-right img {
-    float:none;
+  .project-left img,
+  .project-right img {
+    float: none;
   }
   .project-right p,
-.project-right h2, .project-left p,
-.project-left h2 {
-  text-align: center;
+  .project-right h2,
+  .project-left p,
+  .project-left h2 {
+    text-align: center;
+  }
 }
 /* >||GAP-YEAR >||*/
 .window-wrapper {
@@ -456,7 +461,7 @@ footer p {
 }
 
 /* >||BOOKSHELF >||*/
-.bookshelf {
+/* .bookshelf {
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -484,8 +489,11 @@ footer p {
   margin-top: 150px;
   font-size: 30px;
   font-weight: 400;
+} */
+.book-left,
+.book-right {
+  width: 100px;
 }
-
 /*>|| GRIDS >||*/
 .hover-grid {
   display: grid;
@@ -495,6 +503,7 @@ footer p {
 }
 .hover-grid-img {
   width: 100%;
+  border-radius: 5px;
 }
 
 /* New overlay on hover */
@@ -526,13 +535,17 @@ footer p {
 
 .quote-left,
 .quote-right {
-  font-size: 40px;
+  font-size: 30px;
   margin-top: 50px;
 }
 .quote-left {
   margin-left: 150px;
 }
-
+@media (max-width: 850px) {
+  .quote-left {
+    margin-left: 0;
+  }
+}
 /* >|| CONTACT/FORM STYLES >|| */
 i {
   margin-right: 10px;
