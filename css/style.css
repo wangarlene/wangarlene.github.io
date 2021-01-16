@@ -396,7 +396,6 @@ footer p {
   flex-direction: row-reverse;
 }
 
-
 /* TODO: align text to img top, center projects div, increase margin btwn projects  */
 .project-left img {
   float: left;
@@ -419,21 +418,22 @@ footer p {
 @media (max-width: 1000px) {
   .projects {
     margin-left: 0;
-  
   }
- 
+
   .project-left,
   .project-right {
     flex-direction: column;
-  
   }
-  .project-left img, .project-right img {
-    float:none;
+  .project-left img,
+  .project-right img {
+    float: none;
   }
   .project-right p,
-.project-right h2, .project-left p,
-.project-left h2 {
-  text-align: center;
+  .project-right h2,
+  .project-left p,
+  .project-left h2 {
+    text-align: center;
+  }
 }
 /* >||GAP-YEAR >||*/
 .window-wrapper {
