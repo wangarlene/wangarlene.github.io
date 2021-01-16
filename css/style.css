@@ -377,6 +377,7 @@ footer p {
 }
 .projects img {
   width: 430px;
+  border-radius: 5px;
 }
 
 .project-desc {
@@ -502,6 +503,7 @@ footer p {
 }
 .hover-grid-img {
   width: 100%;
+  border-radius: 5px;
 }
 
 /* New overlay on hover */
