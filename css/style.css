@@ -12,8 +12,7 @@ html {
   margin: 0;
   padding: 0;
 }
-body,
-.bookshelf p {
+body {
   /* fallback */
   font-family: Georgia;
   line-height: 1.6;
@@ -379,6 +378,7 @@ footer p {
 .projects img {
   width: 430px;
 }
+
 .project-desc {
   display: flex;
   flex-direction: column;
@@ -395,7 +395,11 @@ footer p {
 .project-right {
   flex-direction: row-reverse;
 }
-
+.book-left,
+.book-right {
+  width: 200px !important;
+}
+/* TODO: separate books from projects, here .book images are being overridden? horizontally centre each container, add margin below image */
 /* TODO: align text to img top, center projects div, increase margin btwn projects  */
 .project-left img {
   float: left;
@@ -456,7 +460,7 @@ footer p {
 }
 
 /* >||BOOKSHELF >||*/
-.bookshelf {
+/* .bookshelf {
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -484,8 +488,11 @@ footer p {
   margin-top: 150px;
   font-size: 30px;
   font-weight: 400;
+} */
+.book-left,
+.book-right {
+  width: 100px;
 }
-
 /*>|| GRIDS >||*/
 .hover-grid {
   display: grid;
@@ -526,13 +533,17 @@ footer p {
 
 .quote-left,
 .quote-right {
-  font-size: 40px;
+  font-size: 30px;
   margin-top: 50px;
 }
 .quote-left {
   margin-left: 150px;
 }
-
+@media (max-width: 850px) {
+  .quote-left {
+    margin-left: 0;
+  }
+}
 /* >|| CONTACT/FORM STYLES >|| */
 i {
   margin-right: 10px;
