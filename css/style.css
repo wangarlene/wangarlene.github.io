@@ -376,8 +376,9 @@ footer p {
   width: 100%;
 }
 .projects img {
-  width: 430px;
+  max-width: 400px;
   border-radius: 5px;
+  margin-bottom: 20px;
 }
 
 .project-desc {
@@ -405,11 +406,13 @@ footer p {
 .project-left img {
   float: left;
   margin-right: 20px;
+  width: 90vw;
 }
 .project-right img {
   float: right;
   margin-left: 20px;
   text-align: right;
+  width: 90vw;
 }
 .project-right p,
 .project-right h2 {
@@ -431,7 +434,8 @@ footer p {
   }
   .project-left img,
   .project-right img {
-    float: none;
+    margin-left: 0;
+    margin-right: 0;
   }
   .project-right p,
   .project-right h2,
@@ -594,7 +598,7 @@ textarea {
   }
 }
 input {
-  height: 2vh;
+  height: 3vh;
   border: none;
   border-radius: 5px;
 
@@ -616,7 +620,7 @@ button {
   background: #9b5252;
   border: none;
   border-radius: 5px;
-  padding: 1.5vh 1.5vw;
+  padding: 1.5vh 2vh;
   font: 18px "Crimson Pro", serif;
   color: #f8efde;
   margin-top: 5px;
