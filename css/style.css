@@ -372,8 +372,8 @@ footer p {
   justify-items: center;
   align-items: center;
   flex-wrap: wrap;
-  width: 80%;
-  margin: 0 8vw;
+  width: 100%;
+
   /* TODO: spacing needed on left and right, current awk fix with width and margin, and on top for bookshelf */
 }
 .projects img {
@@ -391,7 +391,7 @@ footer p {
 .project-right {
   margin-bottom: 60px;
   align-items: center;
-  width: 90%;
+  width: 80%;
   display: flex;
   flex-direction: row;
 }
