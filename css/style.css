@@ -11,7 +11,9 @@ html {
   /* height: 100%; */
   margin: 0;
   padding: 0;
+  scroll-behavior: smooth;
 }
+
 body {
   /* fallback */
   font-family: Georgia;
@@ -31,6 +33,11 @@ body {
   display: flex;
   flex-direction: column;
   min-height: 100%;
+  /* cursor: url(../images/cursor.png), auto; */
+}
+::selection {
+  background-color: #f8efde;
+  color: #200e2c;
 }
 p {
   margin-top: 0;
@@ -235,7 +242,7 @@ footer p {
   /* >|| HOMEPAGE STYLES >|| */
 .home-bg {
   margin: 0;
-  background: url(../images/home-bg.png), #9b5252;
+  background: url(images/home-pattern.png), #9b5252;
 
   height: 100vh;
   background-size: cover;
@@ -254,7 +261,7 @@ footer p {
   margin: 0;
   background: url(../images/home-pattern.png), #9b5252;
   /* position: fixed, static; */
-  height: 94vh;
+  height: calc(100vh - 50px);
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -290,6 +297,7 @@ footer p {
   }
   .home-text {
     width: 45vw;
+    margin-right: 3vw;
   }
 }
 @media (max-width: 800px) {
@@ -654,7 +662,6 @@ label {
   flex-direction: column;
 }
 .contact-success {
-  margin-left: 100px;
   font-style: italic;
 }
 
