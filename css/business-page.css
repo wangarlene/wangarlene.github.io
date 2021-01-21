@@ -10,15 +10,16 @@
 h1 {
   font-weight: 700;
   text-align: right;
-  font-size: 4em;
+  font-size: 8vw;
   margin: 60px 40px 0;
   line-height: 1.1;
-  box-shadow: inset 0 -0.475em 0 rgba(163, 218, 227, 0.5);
+  /* box-shadow: inset 0 -0.475em 0 #fffafc; */
   /* stroke: #001069;
   stroke-width: 2px;
   color: #fffafc; */
   /* TODO: stroke coloR? */
 }
+
 #about {
   text-align: right;
 }
@@ -36,6 +37,7 @@ a {
   font-weight: 500;
 }
 a:hover {
+  /* TODO: */
 }
 body {
   background: url(../projects/jfj-bg.png), #fffafc;
@@ -78,6 +80,9 @@ nav {
 .landing {
   display: flex;
   flex-direction: row;
+  margin-bottom: 50px;
+  /* background-color: #d4dff5; */
+
   /* display: grid;
   grid-template-columns: repeat(2, 50%); */
   /* TODO:grid vs flex */
@@ -85,12 +90,20 @@ nav {
 
 .landing-text {
   flex-direction: column;
+  width: 50vw;
 }
 .landing-img {
   width: 50vw;
+  background-image: url(../projects/jfj-3.jpg);
+  background-size: cover;
+  background-position: center;
 }
-
-@media (max-width: 800px) {
+@media (min-width: 800px) {
+  .landing {
+    height: 100vh;
+  }
+}
+@media (max-width: 600px) {
   h1 {
     font-size: 3em;
   }
@@ -98,32 +111,72 @@ nav {
     flex-direction: column;
   }
   .landing-img {
-    width: 300px;
+    width: 80vw;
+    display: flex;
+    align-self: center;
+    height: 50vw;
+    border-radius: 2vh;
+    margin-bottom: 10vh;
+  }
+  .landing-text {
+    width: 100vw;
   }
 }
 /* DONATION STYLES */
-#video {
-  width: 50vw;
-}
-ul,
+
 li {
-  color: #d4dff5;
+  color: #fffafc;
+}
+.donations-text,
+#video {
+  height: 20vw;
 }
 .donations {
-  display: grid;
-  grid-template-columns: repeat(2, 50%);
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
+.donations p {
+  margin: 0;
+  color: #fffafc;
+  font-size: 1.3em;
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
 .donations-text {
+  box-sizing: border-box;
   background-color: #001069;
-  padding: 6vh;
+  padding: 20px 40px;
+
+  border-radius: 0 2vh 2vh 0;
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
 }
-@media (max-width: 680px) {
+ul {
+  list-style: none;
+}
+#video {
+  border-radius: 2vh 0 0 2vh;
+}
+@media (max-width: 800px) {
   .donations {
-    display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
+    align-items: center;
+  }
+  #video,
+  .donations-text {
+    height: auto;
+    width: 80vw;
   }
   #video {
-    width: 100vw;
+    border-radius: 0 0 2vh 2vh;
+  }
+  .donations-text {
+    border-radius: 2vh 2vh 0 0;
+    align-items: center;
   }
 }
 /* PRICING STYLES */
@@ -144,8 +197,20 @@ li {
   width: 25vw;
   margin-bottom: 5vw;
   text-align: center;
-  border-radius: 0.3em;
+  font-size: calc((2vh + 2vw) / 2);
+  border-radius: 2vh;
   box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.16);
+}
+.order-button {
+  display: flex;
+  align-self: center;
+  justify-content: center;
+  position: relative;
+  bottom: 70px;
+  font-size: calc((3vh + 3vw) / 2);
+  background-color: #e5f7ef;
+
+  /* why does center alignment move when width is set */
 }
 @media (min-width: 601px) {
   .product-float {
@@ -155,8 +220,15 @@ li {
 }
 @media (max-width: 600px) {
   .product {
-    width: 80%;
+    width: 60%;
     align-self: center;
+    font-size: 4vw;
+  }
+  .order-button {
+    position: initial;
+    bottom: initial;
+    margin-bottom: 40px;
+    font-size: 5vw;
   }
 }
 
@@ -165,7 +237,7 @@ li {
 }
 
 .product-img {
-  border-radius: 0.3em 0.3em 0 0;
+  border-radius: 2vh 2vh 0 0;
   width: 25vw;
 }
 @media (max-width: 600px) {
@@ -180,6 +252,7 @@ li {
   position: relative;
   width: 100%;
 }
+
 .form-bg {
   background-color: #d4dff5;
   display: flex;
@@ -196,10 +269,12 @@ form {
   text-align: center;
   flex-direction: column;
   align-items: center;
-  border-radius: 0.3em;
-  width: 50vw;
+  border-radius: 2vh;
+  width: 60vh;
 }
-
+button {
+  background: none;
+}
 button,
 input {
   border: none;
@@ -212,34 +287,29 @@ input {
   border-style: solid;
   border-width: 2px;
   border-color: #d4dff5;
-  border-radius: 0.3em;
+  border-radius: 2vh;
 }
-button,
+
 #submit {
   background-color: #001069;
   color: #fffafc;
-
+  border-style: none;
   align-self: center;
-  border-radius: 0.3em;
+  width: 130px;
 }
-.order-button {
-  display: flex;
-  align-self: center;
-  justify-content: center;
-  position: relative;
-  bottom: 70px;
-  width: 300px;
 
-  /* why does center alignment move when width is set */
-}
 footer {
   background-color: #001069;
   color: #fffafc;
   text-align: center;
-  padding: 2vh 0;
-  width: 100%;
+  padding: 3vh;
 }
 footer a {
   color: #fffafc;
   font-style: italic;
+}
+@media (max-width: 700px) {
+  form {
+    width: 60vw;
+  }
 }
