@@ -242,8 +242,7 @@ footer p {
   /* >|| HOMEPAGE STYLES >|| */
 .home-bg {
   margin: 0;
-  background: url(images/home-pattern.png), #9b5252;
-
+  background: url(../images/home-pattern.png), #9b5252;
   height: 100vh;
   background-size: cover;
   background-position: center;

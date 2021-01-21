@@ -9,14 +9,27 @@
       href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,700;1,500&display=swap"
       rel="stylesheet"
     />
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script
+      async
+      src="https://www.googletagmanager.com/gtag/js?id=G-YSW9P2X9ZD"
+    ></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
 
+      gtag("config", "G-YSW9P2X9ZD");
+    </script>
     <title>Product Landing Page | Arlene Wang</title>
   </head>
   <body>
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
 
     <header id="header">
-      <a class="nav-link" href="#video"
+      <a class="nav-link" href="https://arlenewang.me"
         ><img
           id="header-img"
           src="http://arlenewang.me/images/nav-logo.png"
@@ -24,40 +37,37 @@
       /></a>
       <!-- <div class="landing"></div> -->
       <nav id="nav-bar">
-        <a class="nav-link" href="#about">About</a>
+        <a class="nav-link" href="#">About</a>
         <a class="nav-link" href="#pricing">Pricing</a>
         <a class="nav-link" href="#form">Newsletter</a>
+        <img class="nav-wave" src="jfj-nav.png" alt="" />
       </nav>
     </header>
     <div class="landing">
-      <div class="landing-left">
+      <div class="landing-text">
         <h1>Jewelry for Justice</h1>
-        <img class="landing-img" src="jfj-4.jpg" alt="" />
-      </div>
-      <div class="landing-right">
-        <video id="video" src="jfj-video.mp4" autoplay></video>
         <p id="about">
           In summer of 2020, I ran a fundraiser for 8 racial justice
           organizations in Canada and the U.S. from handmade jewelry sales.
-          Together, we raised $1.7k on just my personal Instagram and a Google
+          Together, we raised $1.7k through my personal Instagram and a Google
           Forms -- this is the website I would have created for it if I knew how
           to code then!
         </p>
       </div>
+
+      <img class="landing-img" src="jfj-3.jpg" alt="" />
     </div>
-    <!-- <div class="jewelry">
-      <img class="jewelry-img" src="jfj-1.jpg" alt="" />
 
-      <img class="jewelry-img" src="jfj-3.jpg" alt="" />
-    </div> -->
-
-    <ul class="donations">
-      Donations support:
-      <li>the Black Youth Helpline</li>
-      <li>BLM Toronto</li>
-      <li>the NAACP</li>
-      <li>…more to be announced!</li>
-    </ul>
+    <div class="donations">
+      <video id="video" src="jfj-video.mp4" autoplay></video>
+      <ul class="donations-text">
+        Donations support:
+        <li>the Black Youth Helpline</li>
+        <li>BLM Toronto</li>
+        <li>the NAACP</li>
+        <li>…more to be announced!</li>
+      </ul>
+    </div>
 
     <div id="pricing">
       <div class="product">
@@ -71,7 +81,7 @@
         <p>$12.00 CAD</p>
       </div>
       <div class="product">
-        <img class="product-img" src="jfj-3.jpg" alt="" />
+        <img class="product-img" src="jfj-1.jpg" alt="" />
         <p>Earrings:</p>
         <p>$12.00 CAD</p>
       </div>
@@ -79,6 +89,7 @@
     <a class="order-button" href="order-form.html"
       ><button>Order here!</button></a
     >
+    <img class="jfj-wave" src="jfj-wave.png" alt="" />
     <div class="form-bg">
       <form
         id="form"
@@ -95,13 +106,16 @@
           placeholder="Enter your email here"
         />
 
-        <input id="submit" type="submit" name="" value="Send my discount!" />
+        <input id="submit" type="submit" name="" value="Sign me up!" />
       </form>
     </div>
     <footer>
       Project created by Arlene Wang for the
-      <a href="">freeCodeCamp Responsive Web Design Certification</a> • Made
-      with ♥︎
+      <a
+        href="https://www.freecodecamp.org/certification/arlenewang/responsive-web-design"
+        >freeCodeCamp Responsive Web Design Certification</a
+      >
+      • Made with ♥︎
     </footer>
   </body>
 </html>

@@ -1,16 +1,51 @@
-html {
+* {
   font: 300 1em "DM Sans", sans-serif;
   margin: 0;
   padding: 0;
+  color: #001069;
+  scroll-behavior: smooth;
+}
+/* TEXT STYLES */
+
+h1 {
+  font-weight: 700;
+  text-align: right;
+  font-size: 4em;
+  margin: 60px 40px 0;
+  line-height: 1.1;
+  box-shadow: inset 0 -0.475em 0 rgba(163, 218, 227, 0.5);
+  /* stroke: #001069;
+  stroke-width: 2px;
+  color: #fffafc; */
+  /* TODO: stroke coloR? */
+}
+#about {
+  text-align: right;
+}
+@media (max-width: 600px) {
+  h1,
+  #about {
+    text-align: center;
+  }
+}
+p {
+  margin: 40px;
 }
 a {
   text-decoration: none;
   font-weight: 500;
 }
-body {
-  background-color: #fff4f4;
+a:hover {
 }
-
+body {
+  background: url(../projects/jfj-bg.png), #fffafc;
+  background-size: contain;
+  background-position: center;
+  background-repeat: repeat;
+  display: flex;
+  flex-direction: column;
+}
+/* NAV STYLES */
 #header-img {
   position: fixed;
   left: 1vh;
@@ -24,63 +59,78 @@ nav {
   display: flex;
   width: 100%;
   justify-content: flex-end;
-  background-color: #d4dff5;
+  background-color: #001069;
+  z-index: 100;
 }
-h1,
-p,
-a {
-  color: #001069;
-}
-h1 {
-  font-weight: 700;
-  text-align: center;
-  font-size: 5em;
-}
-p {
-  margin: 6vw;
+.nav-wave {
+  position: fixed;
+  top: 48px;
+  /* filter: drop-shadow(0px 15px 7px rgba(0, 0, 0, 0.16)); */
 }
 .nav-link {
-  padding: 1.5vw;
+  padding: 12px 30px;
+  /* FIXME: need more padding on right */
   text-decoration: none;
-  font-style: italic;
-  font-size: 2em;
+  font-size: 1.2em;
+  color: #fffafc;
 }
-
-.donations {
-  background-color: #001069;
-  color: #d4dff5;
-  width: 50%;
-  padding: 3vh;
-  display: flex;
-  justify-items: center;
-  flex-direction: column;
-}
-
-.landing-img {
-  width: 20vw;
-}
-#video {
-  width: 50vw;
-}
+/* LANDING STYLES */
 .landing {
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
+  /* display: grid;
+  grid-template-columns: repeat(2, 50%); */
+  /* TODO:grid vs flex */
 }
-.landing-left,
-.landing-right {
-  display: flex;
+
+.landing-text {
   flex-direction: column;
 }
-.landing-left {
-  width: 20vw;
-}
-.landing-right {
+.landing-img {
   width: 50vw;
 }
+
+@media (max-width: 800px) {
+  h1 {
+    font-size: 3em;
+  }
+  .landing {
+    flex-direction: column;
+  }
+  .landing-img {
+    width: 300px;
+  }
+}
+/* DONATION STYLES */
+#video {
+  width: 50vw;
+}
+ul,
+li {
+  color: #d4dff5;
+}
+.donations {
+  display: grid;
+  grid-template-columns: repeat(2, 50%);
+}
+.donations-text {
+  background-color: #001069;
+  padding: 6vh;
+}
+@media (max-width: 680px) {
+  .donations {
+    display: flex;
+    flex-direction: column;
+  }
+  #video {
+    width: 100vw;
+  }
+}
+/* PRICING STYLES */
 #pricing {
   display: flex;
   justify-content: space-evenly;
+  margin: 100px 7vw 0;
 }
 @media (max-width: 600px) {
   #pricing {
@@ -91,10 +141,17 @@ p {
 
 .product {
   background-color: #d4dff5;
-  width: 30vw;
+  width: 25vw;
   margin-bottom: 5vw;
   text-align: center;
   border-radius: 0.3em;
+  box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.16);
+}
+@media (min-width: 601px) {
+  .product-float {
+    position: relative;
+    bottom: 50px;
+  }
 }
 @media (max-width: 600px) {
   .product {
@@ -109,7 +166,7 @@ p {
 
 .product-img {
   border-radius: 0.3em 0.3em 0 0;
-  width: 30vw;
+  width: 25vw;
 }
 @media (max-width: 600px) {
   .product-img {
@@ -117,15 +174,22 @@ p {
     width: 100%;
   }
 }
+
+/* FORM STYLES */
+.jfj-wave {
+  position: relative;
+  width: 100%;
+}
 .form-bg {
   background-color: #d4dff5;
   display: flex;
   justify-content: center;
   width: 100%;
+
   padding: 0;
 }
 form {
-  background-color: #fff4f4;
+  background-color: #fffafc;
   padding: 3vh;
   margin: 10vw 0;
   display: flex;
@@ -139,39 +203,43 @@ form {
 button,
 input {
   border: none;
-  width: 50%;
   font: 300 1em "DM Sans", sans-serif;
   margin: 1vh;
-  padding: 1vh;
-
-  justify-content: center;
+  padding: 1vh 2vh;
+}
+input {
+  width: 50%;
+  border-style: solid;
+  border-width: 2px;
+  border-color: #d4dff5;
   border-radius: 0.3em;
 }
 button,
 #submit {
   background-color: #001069;
-  color: #d4dff5;
+  color: #fffafc;
 
   align-self: center;
   border-radius: 0.3em;
 }
 .order-button {
   display: flex;
+  align-self: center;
   justify-content: center;
-  max-width: 30%;
+  position: relative;
+  bottom: 70px;
+  width: 300px;
+
   /* why does center alignment move when width is set */
 }
 footer {
   background-color: #001069;
-  color: #d4dff5;
+  color: #fffafc;
   text-align: center;
   padding: 2vh 0;
-
-  bottom: -1;
   width: 100%;
-  margin: 0;
 }
 footer a {
-  color: #d4dff5;
+  color: #fffafc;
   font-style: italic;
 }
