@@ -18,7 +18,7 @@ h1 {
 }
 @media (min-width: 601px) {
   h1 {
-    margin-left: 30px;
+    margin-left: 20px;
   }
 }
 #about {
@@ -38,7 +38,7 @@ a {
   font-weight: 500;
 }
 a:hover {
-  /* TODO: */
+  filter: brightness(0.8);
 }
 body {
   background: url(../projects/jfj-bg.png), #fffafc;
@@ -65,25 +65,32 @@ nav {
   background-color: #001069;
   z-index: 100;
 }
+
+.nav-wave {
+  position: fixed;
+  top: 54px;
+  left: 0;
+  /* filter: drop-shadow(0px 15px 7px rgba(0, 0, 0, 0.16)); */
+}
+.nav-link {
+  padding: 14px calc((3vw + 4vh) / 2);
+
+  /* FIXME: need more padding on right */
+  text-decoration: none;
+  font-size: 1.3em;
+  color: #fffafc;
+}
+
+.nav-padding {
+  padding-right: 70px;
+}
 @media (max-width: 800px) {
   nav {
     justify-content: center;
   }
-}
-.nav-wave {
-  position: fixed;
-  top: 48px;
-  /* filter: drop-shadow(0px 15px 7px rgba(0, 0, 0, 0.16)); */
-}
-.nav-link {
-  padding: 12px calc((4vw + 4vh) / 2);
-  /* FIXME: need more padding on right */
-  text-decoration: none;
-  font-size: 1.2em;
-  color: #fffafc;
-}
-nav:last-child {
-  padding-right: 50px;
+  .nav-padding {
+    padding-right: 0px;
+  }
 }
 /* LANDING STYLES */
 .landing {
@@ -100,6 +107,7 @@ nav:last-child {
 .landing-text {
   flex-direction: column;
   width: 50vw;
+  margin: 2vw;
 }
 .landing-img {
   width: 50vw;
