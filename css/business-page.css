@@ -11,15 +11,16 @@ h1 {
   font-weight: 700;
   text-align: right;
   font-size: 8vw;
-  margin: 60px 40px 0;
+  margin: 80px 4vh 0;
   line-height: 1.1;
-  /* box-shadow: inset 0 -0.475em 0 #fffafc; */
-  /* stroke: #001069;
-  stroke-width: 2px;
-  color: #fffafc; */
-  /* TODO: stroke coloR? */
-}
 
+  /* box-shadow: inset 0 -0.475em 0 #fffafc; */
+}
+@media (min-width: 601px) {
+  h1 {
+    margin-left: 30px;
+  }
+}
 #about {
   text-align: right;
 }
@@ -30,7 +31,7 @@ h1 {
   }
 }
 p {
-  margin: 40px;
+  margin: 4vh;
 }
 a {
   text-decoration: none;
@@ -64,17 +65,25 @@ nav {
   background-color: #001069;
   z-index: 100;
 }
+@media (max-width: 800px) {
+  nav {
+    justify-content: center;
+  }
+}
 .nav-wave {
   position: fixed;
   top: 48px;
   /* filter: drop-shadow(0px 15px 7px rgba(0, 0, 0, 0.16)); */
 }
 .nav-link {
-  padding: 12px 30px;
+  padding: 12px calc((4vw + 4vh) / 2);
   /* FIXME: need more padding on right */
   text-decoration: none;
   font-size: 1.2em;
   color: #fffafc;
+}
+nav:last-child {
+  padding-right: 50px;
 }
 /* LANDING STYLES */
 .landing {
@@ -102,13 +111,17 @@ nav {
   .landing {
     height: 100vh;
   }
+  .landing-text p {
+    font-size: calc((2vh + 2vw) / 2);
+  }
 }
 @media (max-width: 600px) {
   h1 {
-    font-size: 3em;
+    font-size: 12vw;
   }
   .landing {
     flex-direction: column;
+    height: 100vh;
   }
   .landing-img {
     width: 80vw;
@@ -182,7 +195,7 @@ ul {
 /* PRICING STYLES */
 #pricing {
   display: flex;
-  justify-content: space-evenly;
+  justify-content: space-around;
   margin: 100px 7vw 0;
 }
 @media (max-width: 600px) {
@@ -206,11 +219,17 @@ ul {
   align-self: center;
   justify-content: center;
   position: relative;
-  bottom: 70px;
-  font-size: calc((3vh + 3vw) / 2);
+  bottom: 65px;
   background-color: #e5f7ef;
+  border-radius: 2vh;
+  font-size: calc((2.3vh + 2.3vw) / 2);
+
+  box-shadow: 0px 5px 7px rgba(0, 0, 0, 0.16);
 
   /* why does center alignment move when width is set */
+}
+.order-button button {
+  font-weight: 500;
 }
 @media (min-width: 601px) {
   .product-float {
@@ -227,8 +246,7 @@ ul {
   .order-button {
     position: initial;
     bottom: initial;
-    margin-bottom: 40px;
-    font-size: 5vw;
+    font-size: 4.5vw;
   }
 }
 
@@ -251,6 +269,7 @@ ul {
 .jfj-wave {
   position: relative;
   width: 100%;
+  margin-top: 40px;
 }
 
 .form-bg {
@@ -269,21 +288,29 @@ form {
   text-align: center;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   border-radius: 2vh;
   width: 60vh;
+  height: 40vh;
+}
+form p {
+  font-size: 1.3em;
+  margin-top: 0;
 }
 button {
   background: none;
 }
+
 button,
 input {
   border: none;
-  font: 300 1em "DM Sans", sans-serif;
+  font-style: "DM Sans", sans-serif;
+  font-weight: 300;
   margin: 1vh;
   padding: 1vh 2vh;
 }
 input {
-  width: 50%;
+  width: 70%;
   border-style: solid;
   border-width: 2px;
   border-color: #d4dff5;
@@ -302,7 +329,7 @@ footer {
   background-color: #001069;
   color: #fffafc;
   text-align: center;
-  padding: 3vh;
+  padding: 1vh;
 }
 footer a {
   color: #fffafc;
