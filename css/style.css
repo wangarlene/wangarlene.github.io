@@ -83,6 +83,8 @@ a:hover {
   animation-name: color;
   animation-duration: 500ms;
   animation-fill-mode: forwards;
+  text-decoration-line: underline;
+  text-underline-offset: 3px;
 }
 @keyframes color {
   100% {
