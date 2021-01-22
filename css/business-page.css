@@ -324,9 +324,10 @@ input {
 input {
   width: 70%;
   border-style: solid;
-  border-width: 2px;
+  border-width: 1px;
   border-color: #d4dff5;
   border-radius: 2vh;
+  -webkit-appearance: none;
 }
 
 #submit {
