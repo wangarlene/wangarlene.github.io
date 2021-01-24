@@ -242,34 +242,6 @@ footer p {
 }
 |||/* PAGE STYLES */
   /* >|| HOMEPAGE STYLES >|| */
-.home-bg {
-  margin: 0;
-  background: url(../images/home-pattern.png), #9b5252;
-  height: 100vh;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-/* TODO: change bg for mobile */
-.home-heading,
-.home-subheading {
-  text-align: center;
-}
-.home-bg {
-  margin: 0;
-  background: url(../images/home-pattern.png), #9b5252;
-  /* position: fixed, static; */
-  height: calc(100vh - 50px);
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
 .home-heading {
   font-size: 100px;
 }
@@ -281,9 +253,20 @@ footer p {
     font-size: 26px;
   }
 }
-/* FIXME: reordering home-bg with .home-heading, etc. causes font-size to shrink/background to disappear/flex not being able to be applied? may have to do with nav not being able to be includied in header anymore, and landing viewport height is not 100 anymore*/
+.home-bg {
+  margin: 0;
+  background: url(../images/home-pattern.png), #9b5252;
+  height: calc(100vh - 50px);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background-attachment: fixed;
+  text-align: center;
+}
 .home-hearts {
-  /* float: right; */
   max-width: 50vw;
   max-height: 50vh;
   margin-bottom: 4vh;
