@@ -30,10 +30,7 @@ body {
   word-spacing: 0px;
   color: #f8efde;
   margin: 0;
-  display: flex;
-  flex-direction: column;
-  min-height: 100%;
-  /* cursor: url(../images/cursor.png), auto; */
+  /* TODO: cursor: url(../images/cursor.png), auto; */
 }
 ::selection {
   background-color: #f8efde;
@@ -80,16 +77,16 @@ a {
   color: #f8efde;
 }
 a:hover {
-  animation-name: color;
+  animation-name: link-hover;
   animation-duration: 500ms;
   animation-fill-mode: forwards;
-  text-decoration-line: underline;
-  text-underline-offset: 3px;
 }
-@keyframes color {
+@keyframes link-hover {
   100% {
-    /*TODO: transition: 0.5s ease; */
+    transition: 0.5s ease;
     filter: brightness(80%);
+    /* TODO:text-decoration-line: underline;
+    text-underline-offset: 3px; */
   }
 }
 
@@ -242,17 +239,10 @@ footer p {
 }
 |||/* PAGE STYLES */
   /* >|| HOMEPAGE STYLES >|| */
-.home-heading {
-  font-size: 100px;
+.home-bg {
+  /* TODO: duplicate class required for bg to work */
 }
-@media (max-width: 800px) {
-  .home-heading {
-    font-size: 70px;
-  }
-  .home-subheading {
-    font-size: 26px;
-  }
-}
+
 .home-bg {
   margin: 0;
   background: url(../images/home-pattern.png), #9b5252;
@@ -266,10 +256,34 @@ footer p {
   background-attachment: fixed;
   text-align: center;
 }
+.home-heading {
+  font-size: 100px;
+}
 .home-hearts {
   max-width: 50vw;
   max-height: 50vh;
   margin-bottom: 4vh;
+}
+.home-intro p {
+  text-align: left;
+  line-height: 1.6;
+  font-size: 24px;
+  display: flex;
+  flex-direction: column;
+}
+@media (max-width: 800px) {
+  .home-heading {
+    font-size: 70px;
+  }
+  .home-subheading {
+    font-size: 26px;
+  }
+  .home-intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 10vh 10vw;
+  }
 }
 @media (min-width: 801px) {
   .home-intro {
@@ -284,27 +298,12 @@ footer p {
     margin-right: 3vw;
   }
 }
-@media (max-width: 800px) {
-  .home-intro {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 10vh 10vw;
-  }
-}
 
-.home-intro p {
-  text-align: left;
-  line-height: 1.6;
-  font-size: 24px;
-  display: flex;
-  flex-direction: column;
-}
 /* TODO: edit for homepage list */
 .home-intro ul {
   padding-left: 17px;
 }
-.home-intro ul li:before {
+.home-intro ul li::before {
   content: "♥︎";
   font-size: 16px;
 }
