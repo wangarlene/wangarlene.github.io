@@ -75,19 +75,10 @@ a {
   font-style: italic;
   font-weight: 500;
   color: #f8efde;
+  transition: 0.3s ease;
 }
 a:hover {
-  animation-name: link-hover;
-  animation-duration: 500ms;
-  animation-fill-mode: forwards;
-}
-@keyframes link-hover {
-  100% {
-    transition: 0.5s ease;
-    filter: brightness(80%);
-    /* TODO:text-decoration-line: underline;
-    text-underline-offset: 3px; */
-  }
+  filter: brightness(60%);
 }
 
 /* >|| LIST STYLES >||*/
@@ -200,7 +191,7 @@ footer p {
   margin: 30px 20px 0 0px;
   float: right;
   animation-name: twinkle;
-  animation-duration: 4s;
+  animation-duration: 5s;
   animation-iteration-count: infinite;
   animation-timing-function: ease-in-out;
 }
@@ -253,8 +244,13 @@ footer p {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-attachment: fixed;
   text-align: center;
+}
+
+@media (min-width: 1025px) {
+  .home-bg {
+    background-attachment: fixed;
+  }
 }
 .home-heading {
   font-size: 100px;
@@ -304,7 +300,6 @@ footer p {
   padding-left: 17px;
 }
 .home-intro ul li::before {
-  content: "♥︎";
   font-size: 16px;
 }
 .home-intro li {
@@ -333,7 +328,7 @@ footer p {
 .profile-img {
   width: 30%;
   height: 30%;
-  border-radius: 7px;
+  border-radius: 5px;
   margin-right: 50px;
 }
 @media (min-width: 1000px) {
@@ -349,6 +344,7 @@ footer p {
   }
   .profile-img {
     width: 50%;
+    margin-right: 0;
   }
 }
 @media (max-width: 500px) {
@@ -440,7 +436,7 @@ footer p {
 .window-wrapper {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 2rem 0;
+  gap: 4rem 0;
 }
 
 .window {
@@ -455,7 +451,6 @@ footer p {
 .window img {
   width: 50%;
 }
-
 /* >||BOOKSHELF >||*/
 /* .bookshelf {
   display: flex;
@@ -505,9 +500,8 @@ footer p {
 /* New overlay on hover */
 .container .hover {
   position: relative;
-  bottom: 59%;
-
-  /* FIXME: awk and unreliable centre-ing */
+  bottom: 57%;
+  /* FIXME: awk and unreliable centering */
   transition: 0.5s ease;
   opacity: 0;
 }
@@ -517,6 +511,8 @@ footer p {
 }
 .container:hover .hover-grid-img {
   opacity: 30%;
+}
+.container .hover-grid-img {
   transition: 0.5s ease;
 }
 /* Original text overlay */
@@ -525,6 +521,7 @@ footer p {
   font-size: 30px;
   text-align: center;
   position: absolute;
+
   /* TODO: add padding within album */
   width: 100%;
 }
