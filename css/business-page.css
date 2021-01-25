@@ -42,11 +42,17 @@ a:hover {
 }
 body {
   background: url(../projects/jfj-bg.png), #fffafc;
+  background-attachment: fixed;
   background-size: contain;
   background-position: center;
   background-repeat: repeat;
   display: flex;
   flex-direction: column;
+}
+@media (min-width: 1025px) {
+  body {
+    background-attachment: fixed;
+  }
 }
 /* NAV STYLES */
 #header-img {
