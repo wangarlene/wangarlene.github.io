@@ -32,10 +32,9 @@ body {
   margin: 0;
   /* TODO: cursor: url(../images/cursor.png), auto; */
 }
-::selection {
-  background-color: #f8efde;
-  color: #200e2c;
-}
+/* TODO:::selection {
+  background-color: #9b5252;
+} */
 p {
   margin-top: 0;
 }
@@ -47,12 +46,7 @@ main {
 main {
   margin-bottom: 7vh;
 }
-/* @media (min-width: 1200px) {
-  header,
-  main {
-    margin: 0 5vw;
-  }
-} */
+
 /*>|| TITLE STYLES >||*/
 h1 {
   /* fallback */
@@ -222,7 +216,6 @@ footer p {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  margin-bottom: 20px;
 }
 .heart-pagetop {
   height: 30px;
@@ -452,35 +445,7 @@ footer p {
   width: 50%;
 }
 /* >||BOOKSHELF >||*/
-/* .bookshelf {
-  display: flex;
-  flex-direction: column;
-  align-content: center;
-  margin-bottom: 50px;
-}
-.bookshelf img {
-  width: 250px;
-}
 
-.book-left img {
-  float: left;
-  margin: 20px 30px 0px 100px;
-}
-.book-right img {
-  float: right;
-  margin: 20px 100px 0px 30px;
-  text-align: right;
-}
-.book-right p,
-.book-right h3 {
-  text-align: right;
-}
-.bookshelf h3 {
-  margin: 0px;
-  margin-top: 150px;
-  font-size: 30px;
-  font-weight: 400;
-} */
 .book-left,
 .book-right {
   width: 100px;
@@ -489,15 +454,18 @@ footer p {
 .hover-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  margin: 50px 0;
   gap: 5vh;
-  margin: 50px 0px 50px;
 }
 .hover-grid-img {
   width: 100%;
   border-radius: 5px;
 }
-
-/* New overlay on hover */
+/* TODO: padding inside album
+.container {
+  padding: 20px;
+} */
+/* overlay on hover */
 .container .hover {
   position: relative;
   bottom: 57%;
@@ -505,7 +473,7 @@ footer p {
   transition: 0.5s ease;
   opacity: 0;
 }
-/* New overlay appearance on hover */
+/* transition on hover */
 .container:hover .hover {
   opacity: 1;
 }
@@ -515,14 +483,12 @@ footer p {
 .container .hover-grid-img {
   transition: 0.5s ease;
 }
-/* Original text overlay */
+/* text overlay */
 .container p {
   color: #f8efde;
   font-size: 30px;
   text-align: center;
   position: absolute;
-
-  /* TODO: add padding within album */
   width: 100%;
 }
 
@@ -542,65 +508,48 @@ footer p {
   }
 }
 /* >|| CONTACT/FORM STYLES >|| */
-i {
-  margin-right: 10px;
-}
+
 .contact-info {
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-}
-@media (min-width: 1200px) {
-  .contact-info {
-    flex-direction: row;
-  }
-}
-.contact-info p {
   font-size: 26px;
 }
-form label {
-  /* width: 70vw; */
-  display: flex;
-  flex-direction: column;
-}
 
-@media (min-width: 1200px) {
-  form {
-    margin-left: 100px;
+.contact-info i {
+  font-size: 70px;
+  margin-right: 10px;
+}
+@media (max-width: 450px) {
+  .contact-info i {
+    font-size: 60px;
   }
 }
+label {
+  display: flex;
+  flex-direction: column;
+  font-size: 20px;
+}
+
 input,
 textarea {
   background: #f8efde;
+  opacity: 80%;
   margin-bottom: 10px;
   font: 300 18px "Crimson Pro", serif;
   color: #200e2c;
-}
-input,
-textarea {
+  border-radius: 5px;
+  border: none;
+  padding: 1vh;
   width: 75vw;
   margin-top: 5px;
 }
-@media (min-width: 1200px) {
-  input,
-  textarea {
-    width: 25vw;
-    margin-top: 5px;
-  }
-}
+
 input {
   height: 3vh;
-  border: none;
-  border-radius: 5px;
-
-  padding: 1vh;
 }
 textarea {
   height: 15vh;
-  border: none;
-  border-radius: 5px;
-
-  padding: 1vh;
 }
 ::placeholder {
   font-family: "Crimson Pro", serif;
@@ -615,43 +564,25 @@ button {
   font: 18px "Crimson Pro", serif;
   color: #f8efde;
   margin-top: 5px;
-}
-@media (max-width: 450px) {
-  .contact-info i {
-    font-size: 60px;
-  }
-}
-@media (min-width: 451px) {
-  .contact-info i {
-    font-size: 70px;
-  }
+  transition: 0.3s ease;
 }
 button:hover {
-  animation-name: color;
-  animation-duration: 500ms;
-  animation-fill-mode: forwards;
+  filter: brightness(80%);
 }
-@keyframes color {
-  100% {
-    filter: brightness(80%);
+
+@media (min-width: 1200px) {
+  .contact-info {
+    flex-direction: row;
   }
-}
-label {
-  font-size: 20px;
-  display: flex;
-  flex-direction: column;
+  form {
+    margin-left: 100px;
+  }
+  input,
+  textarea {
+    width: 25vw;
+    margin-top: 5px;
+  }
 }
 .contact-success {
   font-style: italic;
 }
-
-/* @media (max-width: 599px) {
-}
-@media (min-width: 600px) {
-}
-@media (min-width: 900px) {
-}
-@media (min-width: 1200px) {
-}
-@media (min-width: 1800px) {
-} */
