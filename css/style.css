@@ -534,7 +534,7 @@ label {
 input,
 textarea {
   background: #f8efde;
-  opacity: 80%;
+  opacity: 90%;
   margin-bottom: 10px;
   font: 300 18px "Crimson Pro", serif;
   color: #200e2c;
@@ -545,9 +545,15 @@ textarea {
   margin-top: 5px;
 }
 
+:focus {
+  opacity: 100%;
+  outline-color: #9b5252;
+}
+
 input {
   height: 3vh;
 }
+
 textarea {
   height: 15vh;
 }
