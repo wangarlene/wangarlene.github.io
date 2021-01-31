@@ -520,6 +520,13 @@ footer p {
   font-size: 70px;
   margin-right: 10px;
 }
+.contact-info i:hover {
+  color: #9b5252;
+  transition: 0.3s ease;
+}
+.contact-info a:hover {
+  filter: brightness(100%);
+}
 @media (max-width: 450px) {
   .contact-info i {
     font-size: 60px;
