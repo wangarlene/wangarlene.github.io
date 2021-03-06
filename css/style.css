@@ -104,6 +104,8 @@ nav a {
   color: #9b5252;
   font-size: 24px;
   margin: 0 20px;
+  /* transition: none; */
+
 }
 
 nav img {
@@ -111,7 +113,11 @@ nav img {
   top: 12px;
   left: 10px;
   width: 32px;
+
   /* may be combined with the mobile menu styles** */
+}
+.nav-logo-link:hover {
+  filter: none;
 }
 
 nav .active {
