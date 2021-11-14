@@ -235,7 +235,7 @@ footer p {
 
 .home-bg {
   margin: 0;
-  background: url(../images/home-pattern.png), #9b5252;
+  background: url(../images/test_background.png), #9b5252;
   height: calc(100vh - 50px);
   background-size: cover;
   background-position: center;
